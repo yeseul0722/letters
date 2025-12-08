@@ -1,0 +1,52 @@
+.card .card-text {
+    display: none;
+    margin-top: 1rem;
+}
+
+.card .card-summary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.card .card-summary img {
+    height: 15.5rem;  /* 기존 250px → rem으로 */
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.card .card-summary button {
+    margin-top: 1rem;
+}
+
+/*.btn-block {*/
+/*    color: #ffc0cb;*/
+/*}*/
+
+.card.open .card-text {
+    display: block;
+}
+
+.card.open .card-summary {
+    display: none;
+}
+
+.card {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.card.open {
+    transform: scale(1.4);
+    z-index: 1;
+    background-color: #fff;
+}
+
+@media (max-width: 768px) {
+    .card.open {
+        transform: scale(1.05);
+    }
+}

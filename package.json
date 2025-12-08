@@ -1,0 +1,14 @@
+{
+  "name": "letters",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "private": true,
+  "dependencies": {
+    "papercss": "^1.9.2",
+    "sakura-js": "^1.1.1"
+  }
+}
