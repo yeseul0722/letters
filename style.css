@@ -1,6 +1,28 @@
 .card .card-text {
     display: none;
     margin-top: 1rem;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 1.2rem;
+    border-radius: 8px;
+}
+
+/* ⭐ 배경만 투명하게 만드는 오버레이 */
+.card .card-text::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: rgba(255, 255, 255, 0.5); /* ← 여기 투명도 조절! */
+    z-index: 0;
+}
+
+/* ⭐ 글자와 내용은 위에 보이도록 */
+.card .card-text > * {
+    position: relative;
+    z-index: 1;
 }
 
 .card .card-summary {
@@ -22,9 +44,6 @@
     margin-top: 1rem;
 }
 
-/*.btn-block {*/
-/*    color: #ffc0cb;*/
-/*}*/
 
 .card.open .card-text {
     display: block;
